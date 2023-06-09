@@ -281,8 +281,8 @@ async def send_webhook(
                 for webhook_link in webhook_links:
                     message = prepare_webhooks.discord()
                     embed = message.embed()
-                    embed.title = f"Downloaded: {subscription.username}"
-                    embed.add_field("username", subscription.username)
+                    embed.title = f"Downloaded: {subscription.user.username}"
+                    embed.add_field("username", subscription.user.username)
                     embed.add_field("post_count", subscription.user.postsCount)
                     embed.add_field("link", subscription.user.get_link())
                     embed.image.url = subscription.user.avatar
